@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+@layer components {
+    .btn-primary{
+        @apply after:content-[""] after:w-[0%] after:h-[3px]  after:bg-rose-600 after:absolute after:bottom-0 after:left-0
+         hover:after:w-[100%] after:duration-200
+    }
+     .icon-primary{
+        @apply  text-2xl mb-4 hover:scale-150 hover:duration-300 
+        
+    }
+}
+
+    
+
+    
+  
