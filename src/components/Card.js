@@ -1,5 +1,5 @@
 import React from 'react'
-import BaseButton from '../components/BaseButton'
+import BaseButton from './BaseButton'
 
 const Card = (props) => {
   return (

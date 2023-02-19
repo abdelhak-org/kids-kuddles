@@ -1,6 +1,7 @@
-  import React from 'react'
+  import React from 'react' ;
   import Container from '../../layout/Container';
-  import useFetchData from '../../hooks/useFetchData'
+  import useFetchData from '../../hooks/useFetchData' ;
+  import ArticleComponent from '../../components/ArticleComponent';
   const Home = () => {
     const  data = useFetchData("https://jsonplaceholder.typicode.com/posts")
     return (
@@ -9,14 +10,11 @@
       " >
         {
           data.slice(0,8).map((item)=>
-          <div key={item.id} className='w-[22%] border  border-blue-300 p-2 m-2 rounded-sm'>
-            <h3 className='p-2 text-gray-800 font-semibold  ' >{item.title}</h3>
-            <p className="p-2 mx-auto my-2  ">{item.body}</p>
-          </div>
+          <ArticleComponent id={item.id} title={item.title} body={item.body}/>
           )
         }
       </Container>
     )
   }
-
+  
   export default Home
