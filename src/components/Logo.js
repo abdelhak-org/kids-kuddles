@@ -1,14 +1,16 @@
-import React from 'react'
-
+import React from "react";
+import { useNavigate } from "react-router-dom";
 const Logo = () => {
-    return (
-    
-    <h3 className="font-bold text-2xl text-yellow-500  " >
-    <span className='text-blue-500'>kids</span>&&
-    <span className='text-rose-600'>kuddles</span>
-    </h3>
-    
-    )
-}
+  const navigateTo = useNavigate("");
 
-export default Logo
+  return (
+    <h3 
+    onClick ={()=> navigateTo("/")}
+    className="font-bold text-2xl text-yellow-500   cursor-pointer">
+      <span className="text-blue-500">kids</span>&&
+      <span className="text-rose-600">kuddles</span>
+    </h3>
+  );
+};
+
+export default Logo;

@@ -1,26 +1,20 @@
-import React from 'react'
-import ListItem from './ListItem';
+import React from "react";
+import ListItem from "./ListItem";
 
 const Mylist = () => {
   return (
-    <ul className='flex  flex-col md:flex-row'>
-      
-      <ListItem to="/" text="home"/>
-      
+    <ul className="flex  flex-col md:flex-row">
+      <ListItem to="/" text="home" />
 
-      <ListItem to="about" text="about"/> 
-      
+{    //  <ListItem to="about" text="about" />
+     // <ListItem to="contact" text="contact" />
+}
+      <ListItem to="articles" text="articles" />
 
-      <ListItem to="contact" text="contact"/>
-      
-
-      <ListItem to ="gallery" text="gallery"/>     
-      
-
-      <ListItem to="articles"  text= "articles"/> 
+      <ListItem to="gallery" text="gallery" />
 
     </ul>
-  )
-}
+  );
+};
 
-export default Mylist
+export default Mylist;

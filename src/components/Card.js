@@ -1,15 +1,19 @@
-import React from 'react'
-import BaseButton from './BaseButton'
-
+import React from "react";
+import BaseButton from "./BaseButton";
+import Box from "../layout/Box"
 const Card = (props) => {
   return (
-    <div className='w-60 text-center h-80 border rounded-md border-blue-300 shadow-sm overflow-hidden'>
-      <img src={ props.image} alt='bild' className='w-full '/>
-      <h3> {props.title} </h3>
+    <Box className="w-60 text-center h-auto border rounded-md 
+     shadow-md overflow-hidden ">
+      <h3 className="w-full text-center font-bold text-xl capitalize ">
+        
+        {props.title}
+      </h3>
       <p>{props.description} </p>
-      <BaseButton  text="get it"/>
-    </div>
-  )
-}
+      <img src={props.image} alt="bild" className="w-full " />
+      <BaseButton text="get it"  className=" bg-pink-800 hover:bg-pink-600 text-sm uppercase"/>
+    </Box>
+  );
+};
 
-export default Card
+export default Card;
