@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState , useRef } from "react";
 import Container from "../../layout/Container";
 import { ImgData } from "../../data/ImgData";
 import Modal from "../../layout/Modal";
-
+import useOnClickOutside from "../../hooks/useClickOutSide"
 const Gallery = () => {
   const [showPortal, setShowPortal] = useState(false);
   const [currentImg , setCurrentImg] = useState("")
+  const ref = useRef();
   
-
+  
+  useOnClickOutside(ref, () => setShowPortal(false));
   const ImageHandler = (ImgSrc)=>{
     setShowPortal(!showPortal);
     setCurrentImg(ImgSrc) 
@@ -36,6 +38,7 @@ const Gallery = () => {
                 src={currentImg}
                 alt="itemimg"
                 key={item.id}
+                ref ={ref}
                 className="w-auto h-auto mx-auto p-2 cursor-pointer  "
                 onClick={() => setShowPortal(!showPortal)}
               />

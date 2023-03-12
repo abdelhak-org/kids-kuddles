@@ -6,8 +6,8 @@ const Mylist = () => {
     <ul className="flex  flex-col md:flex-row">
       <ListItem to="/" text="home" />
 
-{    //  <ListItem to="about" text="about" />
-     // <ListItem to="contact" text="contact" />
+     <ListItem to="about" text="about" />
+{// <ListItem to="contact" text="contact" />
 }
       <ListItem to="articles" text="articles" />
 

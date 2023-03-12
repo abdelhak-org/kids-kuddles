@@ -10,7 +10,9 @@ import Contact from "./pages/contact/Contact";
 import Footer from "./components/Footer";
 import Gallery from "./pages/gallery/Gallery";
 import CreateAccount from "./pages/createAccount/CreateAccount";
-
+import Profile from "./pages/mannageUsers/Profile";
+import SetProfile from "./pages/mannageUsers/SetProfile";
+import UploadPhoto from "./pages/mannageUsers/UploadPhoto";
 function App() {
   return (
     <>
@@ -25,6 +27,12 @@ function App() {
             <Route exact path="articles" element={<Articles />} />
             <Route exact path="gallery" element={<Gallery />} />
             <Route exact path ="createaccount" element={<CreateAccount/>} />
+            <Route exact path ="profile" element={<Profile/>} />
+            <Route exact path ="setprofile" element={<SetProfile/>} />
+            <Route exact path ="uploadphoto" element={<UploadPhoto/>} />
+
+
+
           </Routes>
           <Footer />
     </>
