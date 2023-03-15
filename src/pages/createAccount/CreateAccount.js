@@ -30,18 +30,18 @@ const CreateAccount = () => {
   };
   return (
     <Container
-      className="h-screen bg-[#3ddfdf] text-center font-2xl 
+      className="min-h-screen bg-[#3ddfdf] text-center font-2xl 
     flex justify-center items-center
     "
     >
-      <div className="w-[80%] h-[90%] mx-auto my-auto bg-white flex justify-between items-center  shadow-md">
+      <div className="w-full  md:w-[80%] min-h-[90%] mx-auto my-auto flex-col md:flex-row bg-white flex justify-between items-center  shadow-md">
         <div className="w-[50%] h-[100%] flex justify-center items-center border ">
           <img src={clipartBoy} alt="clippart" className="w-60 h-auto" />
         </div>
 
         <form
           onSubmit={CreateAccountHandler}
-          className=" w-[50%] h-[100%] bg-white px-4 pt-8 mx-auto border "
+          className="w-full md:w-[50%] min-h-screen md:h-[90%] bg-white px-4 pt-8 mx-auto border my-4 "
         >
           <h4 className="text-left">Hello !</h4>
           <p className="text-left"> Good Morning</p>

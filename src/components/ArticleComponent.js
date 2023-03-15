@@ -8,7 +8,7 @@
       
       
       return (
-        <div className="w-[23%] min-h-[280px] border  p-2 m-2 relative">
+        <div className="w-full md:w-[45%] lg:w-[30%] min-h-[240px] border  p-2 m-2 relative">
           <h3 className="p-2 text-[#153939] text-[22px] cursor-pointer font-serif text-justify underline hover:text-rose-800 ">
             {title.slice(0, 28)}
           </h3>

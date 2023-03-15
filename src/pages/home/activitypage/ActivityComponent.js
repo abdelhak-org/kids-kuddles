@@ -6,8 +6,8 @@ import Box from "../../../layout/Box";
 import ActivityContent from "./ActivityContent";
 const ActivityComponent = () => {
   return (
-    <Container className="w-[90vw] h-[100vh] bg-white mx-auto  border-0 ">
-      <div className="w-[80vw]  h-[60vh] mx-auto py-2 bg-pink-800">
+    <Container className="w-[90vw]  min-h-[100vh] bg-white mx-auto  border-0 ">
+      <div className="w-[80vw]  min-h-[60vh] mx-auto py-2 bg-pink-800">
         <ActivityContent subtitle="Activities" maintitle="KIDS ACTIVITIES" />
 
         <p className="text-white w-fit p-2 text-sm mx-auto font-serif">
@@ -16,7 +16,7 @@ const ActivityComponent = () => {
           projects, <br /> cards, newsletters, calendars—just about anything!
         </p>
 
-        <Box className="w-[90%] h-auto mx-auto mt-2 bg-white flex justify-around items-center">
+        <Box className="w-full md:w-[90%] h-fit mx-auto mt-2 bg-white flex justify-around items-center flex-col md:flex-row">
           <Card title="title" description="text text text" image={cardimage} />
           <Card title="title" description="text text text" image={cardimage} />
           <Card title="title" description="text text text" image={cardimage} />

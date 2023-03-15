@@ -29,7 +29,7 @@ const Gallery = () => {
               src={item.ImgSrc}
               alt="itemimg"
               key={item.id}
-              className="w-[33%] h-auto p-2 cursor-pointer  "
+              className="w-full  md:w-[33%] h-auto p-2 cursor-pointer  "
               onClick={()=>ImageHandler(item.ImgSrc)}
             />
           ) : (
