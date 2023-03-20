@@ -3,10 +3,8 @@ import Container from "../../layout/Container";
 import clipartBoy from "../../assets/png-clipart-boy-removebg-preview.png";
 import TextInput from "../../components/formComponent/TextInput";
 import CheckmeText from "../../components/formComponent/CheckmeBox";
-import { auth } from "../../data/firebase.config";
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-
+import useCreateUser from "../../hooks/useCreateUser";
 const CreateAccount = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,13 +18,19 @@ const CreateAccount = () => {
     console.log(event.target.value);
   };
 
-  const CreateAccountHandler = (e) => {
+{ /* const CreateAccountHandler = (e) => {
     e.preventDefault();
     console.log("clicked");
     createUserWithEmailAndPassword(auth, email, password);
     setEmail("");
     setPassword("");
     navigateTo("/setprofile");
+  }*/}
+
+  const { createUser, isLoading, error, user } = useCreateUser();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createUser(email, password);
   };
   return (
     <Container
@@ -40,7 +44,7 @@ const CreateAccount = () => {
         </div>
 
         <form
-          onSubmit={CreateAccountHandler}
+          onSubmit={handleSubmit}
           className="w-full md:w-[50%] min-h-screen md:h-[90%] bg-white px-4 pt-8 mx-auto border my-4 "
         >
           <h4 className="text-left">Hello !</h4>

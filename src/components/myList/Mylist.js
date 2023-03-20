@@ -1,11 +1,11 @@
 import React from "react";
 import ListItem from "./ListItem";
 
-const Mylist = () => {
+const Mylist = ({navshow}) => {
   return (
-    <ul className="w-screen mx-auto flex flex-col
-     justify-center items-center
-      md:flex-row md:justify-arround">
+    <ul className={`w-screen mx-auto flex flex-col
+    justify-center items-center
+     md:flex-row md:justify-arround ${navshow?"block":"hidden"} `}>
       <ListItem to="/" text="home" />
 
       <ListItem to="about" text="about" />

@@ -2,15 +2,15 @@ import React from "react";
 import Container from "../../layout/Container";
 import BaseButton from "../../components/BaseButton";
 import aboutusOne from "../../assets/aboutus-one.jpg";
-
+import Box from "../../layout/Box";
 const About = () => {
   return (
     <Container className="min-h-screen w-screen ">
-      <div
+      <Box
         className=" w-[80%] h-auto md:h-[80%] border  rounded-2xl md:flex-row
        flex-col flex justify-between items-center mx-auto shadow-2xl  overflow-hidden"
       >
-        <div className="w-full md:w-[50%] h-full  py-12 px-12">
+        <Box className="w-full md:w-[50%] h-full   py-12 px-4 md:px-12">
           <h3 className="text-[28px]  font-extrabold text-start mt-12 tracking-widest font-serif text-[#278989]">
             Best Learning
             <br /> Blogger <br />
@@ -22,7 +22,7 @@ const About = () => {
             itself, who seeks after it and wants to have it, simply because it
             is pain..."
           </p>
-          <div className="w-full h-auto flex flex-rows items-center mt-4">
+          <Box className="w-full h-auto flex flex-rows items-center my-4 px-2">
             <input
               className=" border shadow-md border-gray-300 p-1 outline-none w-90 h-10"
               placeholder="Find a Articles ..."
@@ -31,16 +31,16 @@ const About = () => {
               text="search "
               className="bg-[#129f9f] rounded-none capitalize"
             />
-          </div>
-        </div>
-        <div className="w-full md:w-auto h-full ">
+          </Box>
+        </Box>
+        <Box className="w-full md:w-auto h-full ">
           <img
             src={aboutusOne}
             className="h-full mx-auto border "
             alt="aboutusimg"
           />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </Container>
   );
 };
